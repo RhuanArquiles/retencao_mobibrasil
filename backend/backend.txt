@@ -1,2 +1,2 @@
 diretório criado para endereçamento
-testing commit rule 
+testing commit rule
