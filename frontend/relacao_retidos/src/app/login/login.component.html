@@ -1,0 +1,40 @@
+<div class="background">
+  <div class="formulario">
+    <div class="logo">
+      <img class="simbolo" src="/logo.png" alt="logo">
+      <img class="marca" src="/mobibrasil.svg" alt="mobibrasil">
+    </div>
+    <form class="entradas" [formGroup]="dadosUsuario">
+      <mat-form-field appearance="outline" class="campo-entrada">
+        <input matInput placeholder="Usuário" formControlName="usuario">
+        @if (dadosUsuario.get('usuario')?.hasError('required') && dadosUsuario.get('usuario')?.touched) {
+          <mat-error>Usuário é obrigatório</mat-error>
+        }
+
+        @if (dadosUsuario.get('usuario')?.hasError('email') && dadosUsuario.get('usuario')?.touched) {
+          <mat-error>Email inválido</mat-error>
+        }
+      </mat-form-field>
+      <mat-form-field appearance="outline" class="campo-entrada">
+        <input matInput placeholder="Senha" formControlName="senha"
+          [type]="esconder ? 'password' : 'text'">
+        <button
+          mat-icon-button
+          matSuffix
+          (click)="esconderSenha()"
+          [attr.aria-label]="'Esconder senha'"
+          [attr.aria-pressed]="esconder"
+        >
+          <mat-icon>{{esconder ? 'visibility' : 'visibility_off'}}</mat-icon>
+        </button>
+        @if (dadosUsuario.get('senha')?.invalid) {
+          <mat-error>Senha é obrigatória</mat-error>
+        }
+      </mat-form-field>
+    </form>
+
+      <button mat-raised-button class="botao" [disabled]="dadosUsuario.get('usuario')?.value && dadosUsuario.get('senha')?.value ? false : true"
+        (click)="entrar()">ENTRAR
+      </button>
+
+</div>
