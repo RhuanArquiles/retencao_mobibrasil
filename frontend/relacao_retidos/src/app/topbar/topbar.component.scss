@@ -1,0 +1,51 @@
+.topBar{
+  display: flex;
+  background-color: #8A1D85;
+  height: 7vh;
+  align-items: center;
+
+}
+
+.imagem{
+  width: 8vh;
+  padding-left:20px;
+}
+
+.texto-nome{
+  font-family:'Ubuntu', sans-serif;
+  font-weight: 600;
+  font-size: 35px;
+  color: #FAFAFA;
+  padding-right: 10px;
+  cursor:pointer;
+}
+
+.texto{
+  font-family:'Ubuntu', sans-serif;
+  font-weight: 100;
+  color: #FAFAFA;
+}
+
+.usuario{
+  background-color: #FDE700;
+  border-radius: 100%;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.usuario-menu{
+  display: flex;
+  margin-left: auto;
+  margin-right: 20px;
+  align-items: center;
+  cursor: pointer;
+}
+
+.usuario-texto{
+  margin-left: 6px;
+  color:#FAFAFA;
+  font-family:'Ubuntu', sans-serif;
+}
