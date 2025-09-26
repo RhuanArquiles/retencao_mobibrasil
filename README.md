@@ -11,14 +11,14 @@ Aplicação em desenvolvimento para auxiliar no dia-a-dia da equipe de manutenç
 ## Homepage
 <img width="1918" height="906" alt="image" src="https://github.com/user-attachments/assets/862c07f3-5459-4dc3-801e-bec5e0c7aa47" />
 
-## Execução do Backend:
+# Execução do Backend:
 
 1. Crie e ative seu ambiente virtual:
 
 python -m venv venv
-# Windows
+## Windows
 venv\Scripts\activate
-# Linux/Mac
+## Linux/Mac
 source venv/bin/activate
 
 2. Instale as dependencias:
