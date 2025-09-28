@@ -1,0 +1,130 @@
+.fundo{
+  background-color: #FAFAFA; //#FAFAFA
+  height: 93vh;
+  width: 100%;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+.titulo-subtitulo{
+  display: flex;
+  flex-direction: column;
+  margin-left: -10px;
+  padding-bottom: 150px;
+
+}
+
+.titulo{
+  color:#272626;
+  font-weight: 600;
+  padding-top: 100px;
+  padding-left: 30px;
+  font-size: 56px ;
+  font-family:'Maven Pro', sans-serif;
+
+}
+
+.subtitulo{
+  color:#4B5563;
+  font-weight: 400;
+  padding-top: 15px;
+  padding-left: 32px;
+  font-size: 30px;
+  font-family:'Maven Pro', sans-serif;
+}
+.card-criar{
+  background-color: #FFFFFF; // #FFFFFF
+  padding-top: 15px;
+  padding-left: 0px;
+  border-radius: 4px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.18);
+  margin-left: 25px;
+  width: 60vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.card-criar-titulo{
+  display: flex;
+  padding-top: 25px;
+  padding-bottom:25px;
+  padding-left: 25px;
+  font-family:'Maven Pro', sans-serif;
+  font-weight: 600;
+  font-size: 35px;
+}
+.card-criar-subtitulo{
+  display: flex;
+  padding-bottom: 25px;
+  padding-left: 25px;
+  color: #4B5563;
+}
+.circulo-imagem{
+  border-radius: 100%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 25px;
+}
+.rodape-criar{
+  display: flex;
+  background-color: #F4F5F7;
+  font-size: 20px;
+  height: 40px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 25px;
+  justify-items: center ;
+  border-bottom-left-radius: 4px ;
+  border-bottom-right-radius: 4px ;
+  border: 3px solid #F4F5F7;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.18);
+}
+.card-pos{
+  display: flex;
+}
+.card-menor{
+  display: flex;
+  flex-direction: column;
+  background-color: #FFFFFF; // #FFFFFF
+  padding-top: 15px;
+  padding-left: 0px;
+  border-radius: 4px;
+  border: 3px solid #F3F4F6;
+  width: 45vh;
+  margin:25px;
+  border-radius: 4px;
+}
+.card-principal{
+  display: flex;
+  flex-direction: column;
+  background-color: #FFFFFF; // #FFFFFF
+  padding-top: 15px;
+  padding-left: 0px;
+  border-radius: 4px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.18);
+  margin-left: 25px;
+  width: 92vw;
+}
+.titulo-resumo{
+  padding-left: 20px;
+  font-size: 30px;
+  font-weight: 600;
+  font-family: 'Maven Pro';
+}
+.sub-resumo{
+  padding-left: 9px;
+  color:#7E7280;
+  font-size:18px;
+  font-weight: 600;
+  font-family: 'Maven Pro';
+}
+.valor-sub-resumo{
+  margin: 9px;
+  color:#8A1D85;
+  font-size:25px !important;
+  font-weight: 600;
+  font-family: 'Maven Pro';
+}
