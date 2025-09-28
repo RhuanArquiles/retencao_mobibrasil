@@ -55,6 +55,16 @@ async def login(login_schema:LoginSchema, session:Session = Depends(pegar_sessao
                "refresh_token":refresh_token,
                "type_token":"Bearer"}
         
+@auth_router.post("/login-form")
+async def login(login_schema:LoginSchema, session:Session = Depends(pegar_sessao)):
+    usuario = autenticar_usuario(login_schema.nome_usuario, login_schema.senha, session)
+    
+    if not usuario:
+        raise HTTPException(status_code=400, detail="Usuario não encontrado!")
+    else:
+        access_token = criar_token(usuario.id)
+        return{"acess_token":access_token,
+               "type_token":"Bearer"}
         
         
 @auth_router.get("/refresh")
