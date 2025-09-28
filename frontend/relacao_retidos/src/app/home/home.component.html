@@ -1,5 +1,63 @@
+<app-topbar></app-topbar>
 <div class="fundo"><!--fundo  -->
+  <div class="titulo-subtitulo">
+    <span class="titulo">Painel de controle</span>
+    <span class="subtitulo">Gestão de veículos retidos</span>
+  </div>
+  <div class="card-pos">
+<!-- Card 1 - Criar retido -->
+  <div class="card-criar">
+    <div class="circulo-imagem" style="background-color: #FFEDF1;">
+        <img src="./adicionar.svg" alt="Criar novo retido" width="35">
+    </div>
+    <span class="card-criar-titulo">Criar Retido</span>
+    <span class="card-criar-subtitulo">Cadastre nova relação de retidos</span>
+    <div class="rodape-criar">
+      <span style="color:#FE2555">Acessar</span>
+    </div>
+  </div>
 
+<!-- Card 2 - Visualizar frota -->
+   <div class="card-criar">
+    <div class="circulo-imagem" style="background-color: #FFF3EA;">
+        <img src="./frota.svg" alt="Criar novo retido" width="35">
+    </div>
+    <span class="card-criar-titulo">Frota</span>
+    <span class="card-criar-subtitulo">Visualize a relação de veículos</span>
+    <div class="rodape-criar">
+      <span style="color:#FF7100">Acessar</span>
+    </div>
+  </div>
+<!-- Card 3 - Retidos antigos -->
+   <div class="card-criar">
+    <div class="circulo-imagem" style="background-color:#F5ECF5;">
+        <img src="./atualizar.svg" alt="Criar novo retido" width="35">
+    </div>
+    <span class="card-criar-titulo">Retidos Antigos</span>
+    <span class="card-criar-subtitulo">Acesse o histórico de veículos retidos</span>
+    <div class="rodape-criar">
+      <span style="color:#94308F">Acessar</span>
+    </div>
+  </div>
+  </div>
+<!-- Card resumo -->
+  <div class="card-criar card-principal" style="display: flex; margin-top: 8vh;">
+    <span class="titulo-resumo">Resumo de veículos</span>
+    <div style="display:flex">
+      <div class="card-menor sub-resumo">
+        Total de veículos
+        <span class="valor-sub-resumo" style="color:#8A1D85">{{totalFrota}}</span>
+      </div>
+      <div class="card-menor sub-resumo">
+        Veículos Retidos
+        <span class="valor-sub-resumo" style="color:#FE2555">{{veiculosRetidos}}</span>
+      </div>
+      <div class="card-menor sub-resumo">
+        Veículos disponíveis
+        <span class="valor-sub-resumo" style="color:#FF7100">{{frotaDisponivel}}</span>
+      </div>
+    </div>
+  </div>
 
 
 
