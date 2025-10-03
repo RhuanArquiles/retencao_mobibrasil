@@ -1,12 +1,11 @@
 import { Component } from '@angular/core';
 import { TopbarComponent } from '../topbar/topbar.component';
-import { RouterLink } from "@angular/router";
-import { LoginComponent } from '../login/login.component';
+
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [TopbarComponent, RouterLink, LoginComponent],
+  imports: [TopbarComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
 })
