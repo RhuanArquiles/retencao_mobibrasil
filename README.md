@@ -9,7 +9,7 @@ Aplicação em desenvolvimento para auxiliar no dia-a-dia da equipe de manutenç
 <img width="1913" height="905" alt="image" src="https://github.com/user-attachments/assets/5a61bdd5-717d-4ae5-9a9b-c07caa8aafca" />
 
 ## Homepage
-<img width="1918" height="906" alt="image" src="https://github.com/user-attachments/assets/862c07f3-5459-4dc3-801e-bec5e0c7aa47" />
+<img width="1912" height="906" alt="image" src="https://github.com/user-attachments/assets/33072fc7-eb41-486c-8e5a-690e4f96455e" />
 
 # Execução do Backend:
 
