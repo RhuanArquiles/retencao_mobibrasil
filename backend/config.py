@@ -11,4 +11,4 @@ ACCESS_TOKEN_EXPIRE_MINUTES = int(os.getenv("ACCESS_TOKEN_EXPIRE_MINUTES"))
 
 
 bcrypt_context = CryptContext(schemes = ["bcrypt"], deprecated = "auto")
-oauth2_schemas = OAuth2PasswordBearer("/auth/login")
+oauth2_schemas = OAuth2PasswordBearer("/auth/login-form")

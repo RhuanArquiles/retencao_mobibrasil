@@ -1,12 +1,12 @@
 from fastapi import APIRouter, Depends, HTTPException
 from backend.retencao.schemas import RetencaoSchema, RetencaoResponseSchema, RetencaoUpdateSchema
 from backend.models import Retencao
-from backend.dependecies import pegar_sessao
+from backend.dependecies import pegar_sessao, verificar_token
 from sqlalchemy.orm import Session
-from datetime import date
+from datetime import datetime, date
 from typing import List
 
-retencao_router = APIRouter(prefix="/retencao", tags= ["retencao"])
+retencao_router = APIRouter(prefix="/retencao", tags= ["retencao"], dependencies=[Depends(verificar_token)])
 
 @retencao_router.post("/cadastro")
 async def cadastro_retido(retencao_schema: RetencaoSchema, session:Session = Depends(pegar_sessao)):
