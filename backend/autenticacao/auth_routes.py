@@ -29,7 +29,7 @@ def autenticar_usuario(nome_usuario, senha, session):
         return usuario
     
 @auth_router.post("/cadastro")
-async def cadastro_usuario(usuario_schema: UsuarioSchema, session:Session = Depends(pegar_sessao)):
+async def cadastro_usuario(usuario_schema: UsuarioSchema, session:Session = Depends(pegar_sessao), usuario: Usuario = Depends(verificar_token)):
     #buscando usuario:
     usuario = session.query(Usuario).filter(Usuario.nome_usuario==usuario_schema.nome_usuario).first()
     
@@ -54,7 +54,22 @@ async def login(login_schema:LoginSchema, session:Session = Depends(pegar_sessao
         return{"acess_token":access_token,
                "refresh_token":refresh_token,
                "type_token":"Bearer"}
-        
+
+#rota criada apenas para teste de autenticação com fastAPI        
+@auth_router.post("/login-form")
+async def login_form(form_data: OAuth2PasswordRequestForm = Depends(),
+                     session: Session = Depends(pegar_sessao)):
+    usuario = autenticar_usuario(form_data.username, form_data.password, session)
+    
+    if not usuario:
+        raise HTTPException(status_code=400, detail="Usuario não encontrado!")
+    else:
+        access_token = criar_token(usuario.id)
+        return {
+            "access_token": access_token,
+            "token_type": "bearer"
+        }
+
         
         
 @auth_router.get("/refresh")
